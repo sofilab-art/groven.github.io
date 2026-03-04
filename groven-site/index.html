@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groven — Typed Idea Graph for Collective Governance</title>
+  <meta name="description" content="Groven is where structured thinking becomes collective action. An open source platform combining a Git-inspired idea graph, LLM-assisted semantic typology, and integrated governance voting." />
+  <meta property="og:title" content="Groven" />
+  <meta property="og:description" content="Where structured thinking becomes collective action." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://groven.online" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">Groven</a>
+  <ul class="nav-links">
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#typology">Typology</a></li>
+    <li><a href="#governance">Governance</a></li>
+    <li><a href="#open-source">Open Source</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+  </ul>
+  <a href="https://github.com/groven" class="nav-cta" target="_blank" rel="noopener">GitHub →</a>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <canvas id="hero-canvas"></canvas>
+  <div class="grain"></div>
+  <div class="hero-inner">
+    <div class="hero-label reveal">Open Source Initiative · March 2026</div>
+    <h1 class="hero-title reveal">
+      <span class="hero-title-main">Groven</span>
+      <span class="hero-title-sub">makes the growth<br>of ideas visible.</span>
+    </h1>
+    <p class="hero-body reveal">
+      A typed idea graph for collaborative thinking<br class="br-desktop"> and collective governance.
+    </p>
+    <div class="hero-ctas reveal">
+      <a href="#concept" class="btn btn-primary">Explore the concept</a>
+      <a href="https://github.com/groven" class="btn btn-ghost" target="_blank" rel="noopener">View on GitHub</a>
+    </div>
+    <div class="hero-meta reveal">
+      <span>Initiated by <strong>Sofilab GmbH</strong>, Munich</span>
+      <span class="sep">·</span>
+      <span>Co-funded by the <strong>European Union</strong> (Creative Europe)</span>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══ PROBLEM ══ -->
+<section id="problem" class="section section-cream">
+  <div class="container">
+    <div class="section-label reveal">The Problem</div>
+    <h2 class="section-title reveal">
+      Existing platforms<br>
+      <em>cannot distinguish</em> between<br>
+      a reaction and a synthesis.
+    </h2>
+    <div class="problem-grid">
+      <div class="problem-card reveal">
+        <div class="problem-num">01</div>
+        <h3>Engagement ≠ Deliberation</h3>
+        <p>Likes, feeds, and view counts reward provocation over precision. A reaction outperforms a careful synthesis. Platforms aren't broken — they're working exactly as designed. Just not for governance.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-num">02</div>
+        <h3>All contributions look equal</h3>
+        <p>A comment that sharpens an idea is structurally indistinguishable from one that misses the point entirely. At scale, the reasoning disappears into noise.</p>
+      </div>
+      <div class="problem-card reveal">
+        <div class="problem-num">03</div>
+        <h3>Memory loss over time</h3>
+        <p>A forum thread from six months ago is unreadable as a document. The reasoning behind governance decisions becomes irrecoverable. Accountability requires legibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONCEPT ══ -->
+<section id="concept" class="section section-dark">
+  <div class="grain grain-dark"></div>
+  <div class="container">
+    <div class="section-label reveal" style="color: var(--mint)">The Model</div>
+    <h2 class="section-title section-title-light reveal">
+      Seed → Branch → Forest
+    </h2>
+    <p class="section-intro reveal" style="color: var(--mint-faint)">
+      Inspired by Git's version control model, Groven organises all content around a single structural metaphor — a living graph of ideas, not a flat thread of reactions.
+    </p>
+    <div class="sbf-grid">
+      <div class="sbf-card reveal">
+        <div class="sbf-icon">🌱</div>
+        <div class="sbf-label">Seed</div>
+        <p class="sbf-body">A contribution that introduces an idea, question, or position. Always text — optionally combined with images, drawings, video, or links. The root node of every thread.</p>
+        <ul class="sbf-list">
+          <li>No parent — root node in the graph</li>
+          <li>Text-first; media as supplement</li>
+          <li>The starting point for any discussion</li>
+        </ul>
+      </div>
+      <div class="sbf-arrow reveal">→</div>
+      <div class="sbf-card reveal">
+        <div class="sbf-icon">🌿</div>
+        <div class="sbf-label">Branch</div>
+        <p class="sbf-body">A contribution that explicitly builds on an existing Seed or Branch. Has exactly one parent and inherits its lineage. Not a reply — a continuation.</p>
+        <ul class="sbf-list">
+          <li>Requires a description: what does this build on, and where does it take the argument?</li>
+          <li>The LLM proposes a semantic type</li>
+          <li>Author confirms or overrides</li>
+        </ul>
+      </div>
+      <div class="sbf-arrow reveal">→</div>
+      <div class="sbf-card reveal">
+        <div class="sbf-icon">🌳</div>
+        <div class="sbf-label">Forest</div>
+        <p class="sbf-body">The growing network of all Seeds and Branches in a Groven space. The living memory of the community — searchable, filterable, permanently archived.</p>
+        <ul class="sbf-list">
+          <li>Visualised as an interactive graph</li>
+          <li>Filterable by type, author, status</li>
+          <li>Governance decisions anchored as immutable nodes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TYPOLOGY ══ -->
+<section id="typology" class="section section-cream">
+  <div class="container">
+    <div class="section-label reveal">Branch Typology</div>
+    <h2 class="section-title reveal">Not all contributions<br><em>are the same.</em></h2>
+    <p class="section-intro reveal">Groven makes the semantic relationship between contributions structurally visible. The LLM proposes a type — the author confirms or overrides.</p>
+
+    <div class="type-grid">
+      <div class="type-card reveal" data-type="clarification">
+        <div class="type-tag" style="background: #3B82F6">Clarification</div>
+        <p>Sharpens a vague or ambiguous idea. Does not add new content — makes precise what is already there.</p>
+        <div class="type-example">"You probably mean X, not Y — here is why the distinction matters."</div>
+      </div>
+      <div class="type-card reveal" data-type="extension">
+        <div class="type-tag" style="background: var(--leaf)">Extension</div>
+        <p>Carries the idea into territory the Seed did not anticipate. Adds something genuinely new while remaining faithful to the original direction.</p>
+        <div class="type-example">"This also applies to context Z, which the Seed did not consider."</div>
+      </div>
+      <div class="type-card reveal" data-type="reframing">
+        <div class="type-tag" style="background: var(--sand)">Reframing</div>
+        <p>Interprets the same idea from a fundamentally different angle. Does not contradict — but arrives somewhere else from the same starting point.</p>
+        <div class="type-example">"If we frame this differently, the same observation leads somewhere else."</div>
+      </div>
+      <div class="type-card reveal" data-type="contradiction">
+        <div class="type-tag" style="background: #EF4444">Contradiction</div>
+        <p>Identifies a conflict and proposes a divergent direction. The most structurally important type — where genuine disagreement becomes visible.</p>
+        <div class="type-example">"This premise seems wrong — here is an alternative direction."</div>
+      </div>
+      <div class="type-card reveal" data-type="synthesis">
+        <div class="type-tag" style="background: #8B5CF6">Synthesis</div>
+        <p>Connects two or more existing Branches that have developed separately. Attempts to reconcile or integrate divergent lines of thought.</p>
+        <div class="type-example">"Branch A and Branch C are not mutually exclusive — together they imply X."</div>
+      </div>
+      <div class="type-card type-card-contested reveal">
+        <div class="type-tag" style="background: var(--sand)">Contested Signal</div>
+        <p>When the LLM proposes a type and the author selects a different one, Groven generates a visible "Contested" signal on that node.</p>
+        <p style="margin-top: 0.75rem">This marks places where classification is uncertain — where community norms are still forming. <strong>These are exactly the nodes most worth examining.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LLM ROLE ══ -->
+<section id="llm" class="section section-forest">
+  <div class="grain grain-dark"></div>
+  <div class="container">
+    <div class="section-label reveal" style="color: var(--mint)">The LLM's Role</div>
+    <h2 class="section-title section-title-light reveal">
+      Not a moderator.<br>Not a recommender.<br><em style="color: var(--mint)">A semantic observer.</em>
+    </h2>
+    <p class="section-intro reveal" style="color: var(--mint-faint)">
+      Engagement metrics fail for governance because they optimise for interaction volume, not argument quality. Groven uses an LLM to make the semantic structure of a discussion visible — not to steer it.
+    </p>
+    <div class="llm-grid">
+      <div class="llm-col reveal">
+        <div class="llm-col-header llm-col-does">What it does</div>
+        <ul class="llm-list">
+          <li>Reads every Branch with its parent and proposes a semantic type</li>
+          <li>Provides a brief explanation of its classification</li>
+          <li>Generates structured summaries of discussion threads on request</li>
+          <li>Signals where ideas have grown collectively in the Forest</li>
+          <li>Identifies threads where Synthesis may be possible</li>
+        </ul>
+      </div>
+      <div class="llm-col reveal">
+        <div class="llm-col-header llm-col-doesnt">What it does not do</div>
+        <ul class="llm-list llm-list-not">
+          <li>Steer conversations toward any particular outcome</li>
+          <li>Hide, suppress, or deprioritise any contribution</li>
+          <li>Decide when a topic is ready for a vote</li>
+          <li>Evaluate the quality or correctness of ideas</li>
+          <li>Act without human review or override</li>
+        </ul>
+      </div>
+    </div>
+    <div class="llm-principle reveal">
+      The LLM proposes — the author decides.
+    </div>
+  </div>
+</section>
+
+<!-- ══ GOVERNANCE ══ -->
+<section id="governance" class="section section-cream">
+  <div class="container">
+    <div class="section-label reveal">Governance Module</div>
+    <h2 class="section-title reveal">
+      Voting is not a<br>separate tool —<br><em>it is a state transition</em><br>in the same graph.
+    </h2>
+    <p class="section-intro reveal">
+      A separate voting tool breaks the chain of accountability. Groven integrates the vote into the same graph where the discussion took place — so the reasoning is permanently legible.
+    </p>
+    <div class="gov-states">
+      <div class="gov-state reveal">
+        <div class="gov-state-indicator gov-open"></div>
+        <div class="gov-state-content">
+          <div class="gov-state-label">Open</div>
+          <p>Discussion is active. Seeds are planted, Branches grow, each Branch is semantically classified. Anyone with access to the space can contribute.</p>
+        </div>
+      </div>
+      <div class="gov-connector reveal">↓</div>
+      <div class="gov-state reveal">
+        <div class="gov-state-indicator gov-ready"></div>
+        <div class="gov-state-content">
+          <div class="gov-state-label">Ready</div>
+          <p>A designated body declares the topic ready for decision. The LLM generates a structured summary: positions, attempted syntheses, open forks. Discussion closes for new Branches.</p>
+          <div class="gov-note">Declaration of readiness is always a human decision.</div>
+        </div>
+      </div>
+      <div class="gov-connector reveal">↓</div>
+      <div class="gov-state reveal">
+        <div class="gov-state-indicator gov-decided"></div>
+        <div class="gov-state-content">
+          <div class="gov-state-label">Decided</div>
+          <p>Vote complete. The result — including full vote breakdown and required written justification — is anchored as an <strong>immutable node</strong> directly in the Forest, linked to the Branches it resolved.</p>
+          <div class="gov-note">Minority positions are always recorded alongside the majority decision.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ DIFFERENTIATION ══ -->
+<section id="diff" class="section section-dark">
+  <div class="grain grain-dark"></div>
+  <div class="container">
+    <div class="section-label reveal" style="color: var(--mint)">Differentiation</div>
+    <h2 class="section-title section-title-light reveal">The combination<br>that doesn't<br><em style="color: var(--mint)">exist yet.</em></h2>
+    <div class="diff-table-wrap reveal">
+      <table class="diff-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Kialo / Pol.is</th>
+            <th>Loomio / Decidim</th>
+            <th class="th-groven">Groven</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Idea lineage graph</td>
+            <td class="td-no">Partial (tree only)</td>
+            <td class="td-no">No</td>
+            <td class="td-yes">Full ancestry</td>
+          </tr>
+          <tr>
+            <td>Branch typology</td>
+            <td class="td-no">Pro/Con only</td>
+            <td class="td-no">No</td>
+            <td class="td-yes">5 semantic types</td>
+          </tr>
+          <tr>
+            <td>LLM structuring assistant</td>
+            <td class="td-no">No</td>
+            <td class="td-no">No</td>
+            <td class="td-yes">Visible + overridable</td>
+          </tr>
+          <tr>
+            <td>Voting in same graph</td>
+            <td class="td-no">No</td>
+            <td class="td-partial">Partial</td>
+            <td class="td-yes">State transition</td>
+          </tr>
+          <tr>
+            <td>Decision anchored in lineage</td>
+            <td class="td-no">No</td>
+            <td class="td-no">No</td>
+            <td class="td-yes">Immutable node</td>
+          </tr>
+          <tr>
+            <td>Minority position recording</td>
+            <td class="td-no">No</td>
+            <td class="td-partial">Partial</td>
+            <td class="td-yes">Always required</td>
+          </tr>
+          <tr>
+            <td>Self-hostable open source</td>
+            <td class="td-no">No</td>
+            <td class="td-partial">Yes / Partial</td>
+            <td class="td-yes">Core commitment</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OPEN SOURCE ══ -->
+<section id="open-source" class="section section-cream">
+  <div class="container">
+    <div class="section-label reveal">Open Source</div>
+    <h2 class="section-title reveal">A governance tool<br>must be <em>transparent</em><br>to be trusted.</h2>
+    <div class="oss-grid">
+      <div class="oss-card reveal">
+        <div class="oss-icon">⚖</div>
+        <h3>MIT License</h3>
+        <p>Maximum reuse, including commercial use. Any organisation can self-host Groven without licensing obligations. Source code is always open.</p>
+      </div>
+      <div class="oss-card reveal">
+        <div class="oss-icon">⬡</div>
+        <h3>Self-hostable</h3>
+        <p>No mandatory cloud dependency. Any community can run their own Groven instance on their own infrastructure.</p>
+      </div>
+      <div class="oss-card reveal">
+        <div class="oss-icon">↻</div>
+        <h3>Governed by itself</h3>
+        <p>Roadmap decisions made through public Groven discussions. The RFC process uses the Seed→Branch→Forest model natively. We're accountable to the same standard we advocate for others.</p>
+      </div>
+      <div class="oss-card reveal">
+        <div class="oss-icon">◎</div>
+        <h3>CORPUS as reference</h3>
+        <p>First and reference implementation. Validates the concept in a real governance context. Groven has zero dependency on CORPUS — fully general-purpose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CORPUS ══ -->
+<section id="corpus" class="section section-forest">
+  <div class="grain grain-dark"></div>
+  <div class="container corpus-inner">
+    <div>
+      <div class="section-label reveal" style="color: var(--mint)">First Use Case</div>
+      <h2 class="section-title section-title-light reveal">CORPUS<br>Royalty Protocol</h2>
+      <p class="reveal" style="color: var(--mint-faint); max-width: 32rem; line-height: 1.7">
+        CORPUS is an open licensing and royalty infrastructure for music in the age of AI — developed by Sofilab GmbH, Munich, co-funded by the European Union (Creative Europe).
+      </p>
+      <p class="reveal" style="color: var(--mint-faint); max-width: 32rem; line-height: 1.7; margin-top: 1rem">
+        It requires a governance platform that makes the reasoning behind decisions permanently legible, connects community discussion to formal voting, and scales without losing deliberation quality.
+      </p>
+      <p class="reveal" style="color: var(--mint); margin-top: 1.5rem; font-style: italic">
+        Groven is domain-agnostic. CORPUS is its first proof of concept.
+      </p>
+    </div>
+    <div class="corpus-facts reveal">
+      <div class="corpus-fact">
+        <span class="fact-label">Status</span>
+        <span class="fact-val">Development / Pilot</span>
+      </div>
+      <div class="corpus-fact">
+        <span class="fact-label">Community</span>
+        <span class="fact-val">&lt;50 contributors (launch)</span>
+      </div>
+      <div class="corpus-fact">
+        <span class="fact-label">Selection</span>
+        <span class="fact-val">Stratified sortition</span>
+      </div>
+      <div class="corpus-fact">
+        <span class="fact-label">Governance</span>
+        <span class="fact-val">Sortition Jury model</span>
+      </div>
+      <div class="corpus-fact">
+        <span class="fact-label">Domain</span>
+        <span class="fact-val">Music &amp; AI licensing</span>
+      </div>
+      <div class="corpus-fact">
+        <span class="fact-label">Funding</span>
+        <span class="fact-val">EU Creative Europe</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ROADMAP ══ -->
+<section id="roadmap" class="section section-cream">
+  <div class="container">
+    <div class="section-label reveal">Roadmap</div>
+    <h2 class="section-title reveal">From prototype<br>to <em>public release</em>.</h2>
+    <div class="roadmap-track">
+      <div class="roadmap-line"></div>
+      <div class="roadmap-phase reveal">
+        <div class="phase-dot phase-done"></div>
+        <div class="phase-label">Phase 0</div>
+        <div class="phase-time">M 1–2</div>
+        <div class="phase-title">Foundation</div>
+        <div class="phase-body">Repo, data model, auth, basic Seed creation and display.</div>
+      </div>
+      <div class="roadmap-phase reveal">
+        <div class="phase-dot phase-done"></div>
+        <div class="phase-label">Phase 1</div>
+        <div class="phase-time">M 3–4</div>
+        <div class="phase-title">Seed→Branch→Forest</div>
+        <div class="phase-body">Branch creation, lineage graph, Forest visualisation (tree view).</div>
+      </div>
+      <div class="roadmap-phase reveal">
+        <div class="phase-dot phase-active"></div>
+        <div class="phase-label">Phase 2</div>
+        <div class="phase-time">M 5–6</div>
+        <div class="phase-title">LLM Integration</div>
+        <div class="phase-body">Type proposal, explanation display, author override, Contested signal.</div>
+      </div>
+      <div class="roadmap-phase reveal">
+        <div class="phase-dot"></div>
+        <div class="phase-label">Phase 3</div>
+        <div class="phase-time">M 7–8</div>
+        <div class="phase-title">Governance Module</div>
+        <div class="phase-body">Voting, Ready state declaration, Decision node anchoring in Forest.</div>
+      </div>
+      <div class="roadmap-phase reveal">
+        <div class="phase-dot"></div>
+        <div class="phase-label">Phase 4</div>
+        <div class="phase-time">M 9–10</div>
+        <div class="phase-title">CORPUS Pilot</div>
+        <div class="phase-body">Production integration. Sortition jury onboarding. Real governance load.</div>
+      </div>
+      <div class="roadmap-phase reveal">
+        <div class="phase-dot phase-future"></div>
+        <div class="phase-label">Phase 5</div>
+        <div class="phase-time">M 11–12</div>
+        <div class="phase-title">Public Release v1.0</div>
+        <div class="phase-body">Open source release. Documentation, contribution guide, RFC process activated.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLOSING ══ -->
+<section id="closing" class="section section-dark closing-section">
+  <div class="grain grain-dark"></div>
+  <canvas id="closing-canvas"></canvas>
+  <div class="container closing-inner">
+    <h2 class="closing-title reveal">
+      Groven is where<br>structured thinking<br><em>becomes collective action.</em>
+    </h2>
+    <p class="closing-body reveal">
+      It is open source, self-hostable, and governed by the same tool it provides.
+    </p>
+    <div class="closing-links reveal">
+      <a href="https://groven.online" class="closing-link">
+        <span class="cl-label">groven.online</span>
+        <span class="cl-sub">Website &amp; documentation</span>
+      </a>
+      <a href="https://github.com/groven" class="closing-link" target="_blank" rel="noopener">
+        <span class="cl-label">github.com/groven</span>
+        <span class="cl-sub">Source code &amp; issues</span>
+      </a>
+      <a href="mailto:hello@sofilab.de" class="closing-link">
+        <span class="cl-label">Sofilab GmbH, Munich</span>
+        <span class="cl-sub">Contact &amp; collaboration</span>
+      </a>
+    </div>
+    <div class="closing-seed reveal">This page is a Seed. Fork it.</div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <span class="footer-logo">Groven</span>
+    <span class="footer-copy">Open Source Initiative · Initiated by Sofilab GmbH, Munich · Co-funded by the European Union (Creative Europe)</span>
+    <span class="footer-version">v0.1 concept</span>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
