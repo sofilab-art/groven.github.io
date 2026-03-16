@@ -1,6 +1,6 @@
-# groven.github.io
+# groven.online
 
-Website and landing page for **[Groven](https://github.com/sofilab-art/groven)** — an open source platform combining a typed idea graph, LLM-assisted semantic typology, and integrated governance voting.
+Website and landing page for **[Groven](https://github.com/sofilab-art/groven)** — an open source platform where collective thinking becomes collective action.
 
 Live at **[groven.online](https://groven.online)**
 
@@ -8,13 +8,13 @@ Live at **[groven.online](https://groven.online)**
 
 ## About Groven
 
-Groven is where structured thinking becomes collective action. It is a communication platform for communities that need to move from open discussion to informed collective decision — without losing the reasoning that got them there.
+Groven is a platform for communities that need to think together — not just talk. It combines a typed idea graph, LLM-assisted semantic classification, and integrated governance into a single spatial interface.
 
 Core concepts:
 
-- **Seed → Branch → Forest** — a Git-inspired model for idea lineage
-- **Branch typology** — five semantic types (Clarification, Extension, Reframing, Contradiction, Synthesis) classified by an LLM, confirmed or overridden by the author
-- **Governance module** — discussion, readiness declaration, and voting integrated in a single graph; decisions anchored as immutable nodes
+- **The Grove** — a spatial, depth-navigable environment where conversations grow like plants: seeds become seedlings, shrubs, and trees as discourse deepens
+- **Semantic relationships** — five types (Clarification, Extension, Reframing, Contradiction, Synthesis) proposed by AI, confirmed by humans
+- **Governance from conversation** — decisions emerge from structured thinking, not imposed voting
 
 → App repository: [sofilab-art/groven](https://github.com/sofilab-art/groven)
 
@@ -25,26 +25,25 @@ Core concepts:
 Static website built with vanilla HTML, CSS, and JavaScript. No build step, no framework, no dependencies beyond Google Fonts.
 
 ```
-index.html   — full landing page
-style.css    — all styles (CSS custom properties, responsive)
-main.js      — scroll reveal, canvas animations, nav behaviour
+index.html   — landing page with interactive Grove hero + content sections
+style.css    — all styles (CSS custom properties, Grove scene, responsive)
+main.js      — Grove hero (depth navigation, parallax, semantic zoom), scroll reveal, nav
+v6/          — design documents and mockups
 ```
+
+### The Grove Hero
+
+The hero section is an interactive forest scene where SVG plants represent conversations at different stages. Users navigate through depth (scroll/swipe vertical) and laterally (swipe horizontal), with fragment cards appearing via semantic zoom as you approach each plant.
 
 ---
 
 ## Development
 
-Clone and open `index.html` directly in a browser. No server required for local development.
+Clone and open `index.html` directly in a browser, or use a local server:
 
 ```bash
-git clone https://github.com/sofilab-art/groven.github.io
-cd groven.github.io
-open index.html
-```
-
-For live-reload during editing:
-
-```bash
+git clone https://github.com/sofilab-art/groven.online
+cd groven.online
 npx serve .
 ```
 
@@ -54,21 +53,20 @@ npx serve .
 
 Hosted via GitHub Pages from the `main` branch root. Push to `main` → live within seconds.
 
-`groven.online` forwards to `groven.github.io` via DNS CNAME.
+`groven.online` forwards to GitHub Pages via DNS CNAME.
 
 ---
 
 ## Contributing
 
-Issues and PRs welcome. For substantive changes to copy or concept, please open an issue first — content decisions are made in [sofilab-art/groven](https://github.com/sofilab-art/groven) using Groven's own governance process once the platform is live.
+Issues and PRs welcome. For substantive changes to copy or concept, please open an issue first.
 
 ---
 
 ## Credits
 
-Initiated by [Sofilab GmbH](https://sofilab.art), Munich.  
-Co-funded by the European Union (Creative Europe).
+Initiated by [Sofilab GmbH](https://sofilab.art), Munich.
 
 ---
 
-*This file is a Seed. Fork it.*
+*Groven is not a product. It is a question. Fork it.*

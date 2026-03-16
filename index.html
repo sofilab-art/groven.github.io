@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Groven — Where Public Thinking Becomes Collective Action</title>
-  <meta name="description" content="Groven is an open-source platform for communities that need to move from open discussion to informed decision — without losing the reasoning that got them there." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Groven — Where Collective Thinking Becomes Collective Action</title>
+  <meta name="description" content="Groven is an open-source platform where collective thinking becomes collective action. Not faster. Not louder. Deeper." />
   <meta property="og:title" content="Groven" />
-  <meta property="og:description" content="Where public thinking becomes collective action." />
+  <meta property="og:description" content="Where collective thinking becomes collective action." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://groven.online" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,333 +19,175 @@
 <!-- ══ NAV ══ -->
 <nav id="nav">
   <a href="#" class="nav-logo">Groven</a>
-  <ul class="nav-links">
-    <li><a href="#problem">Problem</a></li>
-    <li><a href="#questions">Questions</a></li>
-    <li><a href="#how-it-works">How It Works</a></li>
-    <li><a href="#what-exists">Status</a></li>
-    <li><a href="#open-source">Open Source</a></li>
-  </ul>
   <a href="https://github.com/sofilab-art/groven" class="nav-cta" target="_blank" rel="noopener">GitHub →</a>
-  <button class="nav-toggle" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
 
-<!-- ══ HERO ══ -->
-<section id="hero">
-  <canvas id="hero-canvas"></canvas>
-  <div class="grain"></div>
-  <div class="hero-inner">
-    <div class="hero-label reveal">Open Source Initiative · 2026</div>
-    <h1 class="hero-title reveal">
-      <span class="hero-title-main">Groven</span>
-      <span class="hero-title-sub">Where public thinking becomes collective action.</span>
+<!-- ══ GROVE HERO ══ -->
+<section id="grove-hero">
+  <div id="scene">
+    <div class="layer" id="sky"></div>
+    <div class="layer" id="layer-far"></div>
+    <div class="layer" id="layer-mid"></div>
+    <div class="layer" id="layer-near"></div>
+    <div id="ground"></div>
+  </div>
+
+  <div id="hint">Scroll to dive in &nbsp;·&nbsp; Swipe to explore</div>
+  <div id="depth-indicator"></div>
+  <div id="scroll-prompt">
+    <span class="scroll-text">Deeper</span>
+    <div class="scroll-arrow"></div>
+  </div>
+  <div id="lateral-hint">← Swipe →</div>
+</section>
+
+<!-- ══ HEADLINE ══ -->
+<section id="headline" class="section section-dark">
+  <div class="grain grain-dark"></div>
+  <div class="container headline-inner">
+    <h1 class="headline-title reveal">
+      Where collective thinking becomes collective action.
     </h1>
-    <p class="hero-body reveal">
-      An open-source platform for communities that need to move from open discussion to informed decision — without losing the reasoning that got them there.
-    </p>
-    <div class="hero-ctas reveal">
-      <a href="https://github.com/sofilab-art/groven" class="btn btn-primary" target="_blank" rel="noopener">GitHub</a>
-    </div>
-    <div class="hero-meta reveal">
-      <span>Initiated by <strong>Sofilab GmbH</strong>, Munich</span>
-      <span class="sep">·</span>
-      <span>Co-funded by the <strong>European Union</strong> (Creative Europe)</span>
-    </div>
-  </div>
-  <div class="hero-scroll-hint">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
+    <p class="headline-sub reveal">Not faster. Not louder. Deeper.</p>
   </div>
 </section>
 
-<!-- ══ PROBLEM ══ -->
-<section id="problem" class="section section-cream">
+<!-- ══ THE QUESTION ══ -->
+<section id="question" class="section section-cream">
   <div class="container">
-    <div class="section-label reveal">The Problem</div>
-    <h2 class="section-title reveal">
-      Online discussion is broken <em>in two directions.</em>
+    <div class="section-label reveal">The question that drives us</div>
+    <p class="question-intro reveal">We ask ourselves a simple question:</p>
+    <h2 class="question-big reveal">
+      What would happen if a community didn't just talk to each other — but thought together?
     </h2>
-    <div class="problem-grid problem-grid-two">
-      <div class="problem-card reveal">
-        <div class="problem-num">Too flat.</div>
-        <p>Most platforms treat every contribution the same. A personal experience, a counterargument, a cited source, and a joke all appear as identical comments in a vertical stack. At scale, the reasoning disappears. Governance is detached from the thinking that preceded it.</p>
-      </div>
-      <div class="problem-card reveal">
-        <div class="problem-num">Too rigid.</div>
-        <p>When platforms overcorrect toward structure, every conversation becomes a proto-bureaucratic object. Topics are framed too early as propositions. Informal exchange is instrumentalised. Communities need places for asking, witnessing, helping, and disagreeing — not just deciding.</p>
-      </div>
-    </div>
-    <div class="problem-between reveal">
-      Groven is built for the space between.
+    <div class="question-body reveal">
+      <p>Where every voice is heard — not because the algorithm ranks it higher, but because it contributes something to the conversation. Where a question asked today can be linked to an observation from last year. Where a decision doesn't come out of nowhere, but from a chain of thinking that can be traced.</p>
+      <p>That is the question we are trying to answer.<br>Groven is the attempt to make that answer practical.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ QUESTIONS ══ -->
-<section id="questions" class="section section-dark">
+<!-- ══ WHAT MAKES US DIFFERENT ══ -->
+<section id="different" class="section section-dark">
   <div class="grain grain-dark"></div>
   <div class="container">
-    <div class="section-label reveal" style="color: var(--mint)">The Questions We're Tackling</div>
-    <h2 class="section-title section-title-light reveal">
-      Questions no existing platform has <em>adequately addressed.</em>
-    </h2>
-    <div class="questions-grid">
-      <div class="question-card reveal">
-        <h3>Can a platform host different modes of civic life?</h3>
-        <p>What if the same system supported casual exchange, focused deliberation, formal proposal-making, and binding decisions — without confusing them?</p>
+    <div class="section-label reveal" style="color: var(--mint)">What makes us different</div>
+    <div class="diff-grid">
+
+      <div class="diff-card reveal">
+        <h3>From the internet forum</h3>
+        <p>A forum is an archive of reactions. What remains is sequence: who wrote first, who was loudest, what got the most agreement. The relationship between ideas is invisible. What a discussion actually produced is nearly impossible to reconstruct six months later.</p>
+        <p class="diff-punchline">Groven doesn't ask <em>when</em> you said something. It asks <em>what for</em>.</p>
       </div>
-      <div class="question-card reveal">
-        <h3>Can governance grow from conversation?</h3>
-        <p>What if voting wasn't a separate tool, but the natural conclusion of a discussion that had been structured well enough to decide? What if the reasoning path from first question to final decision was permanently legible?</p>
+
+      <div class="diff-card reveal">
+        <h3>From Discord and social media</h3>
+        <p>Social media optimises for engagement. What triggers reactions gets visibility. That's not a bug — it's the business model. For open communication it works. For collective thinking, it's the wrong tool.</p>
+        <p class="diff-punchline">Groven optimises for nothing. It shows what is there. Not what is currently loud.</p>
       </div>
-      <div class="question-card reveal">
-        <h3>Do communities need to decide everything?</h3>
-        <p>What if some matters could remain open, unresolved but not lost? What if non-decision was a legitimate outcome, not a failure?</p>
+
+      <div class="diff-card reveal">
+        <h3>From voting platforms like Loomio or Decidim</h3>
+        <p>Voting tools solve a real problem — collective decision-making. But they assume the thinking happened somewhere else. The question is already posed. The options are already formulated. The path to get there is not part of the system.</p>
+        <p class="diff-punchline">Groven treats the decision as a possible outcome of thinking — not as its purpose.</p>
       </div>
-      <div class="question-card reveal">
-        <h3>Can AI assist without governing?</h3>
-        <p>What if AI helped map a conversation — suggested connections, summarised threads, detected questions — but never decided what a contribution means? What if every AI proposal was visible, explainable, and overridable?</p>
+
+      <div class="diff-card reveal">
+        <h3>From Kialo and structured debate platforms</h3>
+        <p>Platforms like Kialo force every contribution into binary logic: pro or con. That is honest about conflict. But collective thinking is not only made of conflict. It is made of clarifications, extensions, experiences, sources, questions — and sometimes: syntheses that dissolve the contradiction.</p>
+        <p class="diff-punchline">Groven knows five relationship types. And it prescribes none of them.</p>
       </div>
-      <div class="question-card reveal">
-        <h3>Can structure make discussion better without killing it?</h3>
-        <p>What if contributions carried visible semantic relationships — not imposed by a moderator, but proposed by AI and confirmed by the author? Does knowing <em>how</em> your idea relates to someone else's change <em>what</em> you write?</p>
+
+      <div class="diff-card diff-card-wide reveal">
+        <h3>From metaverse projects and 3D collaboration spaces</h3>
+        <p>Spatial platforms have the right intuition: conversations need space, not just surface. But synchronous presence in 3D environments requires simultaneity. That works for meetings. For collective thinking across weeks and months, it's the wrong metaphor.</p>
+        <p class="diff-punchline">Groven is spatial — but asynchronous. You enter a place that was already there before you arrived. And that remains after you leave.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ══ HOW IT WORKS ══ -->
-<section id="how-it-works" class="section section-cream">
+<!-- ══ GOALS ══ -->
+<section id="goals" class="section section-cream">
   <div class="container">
-    <div class="section-label reveal">How Groven Works</div>
-    <h2 class="section-title reveal">
-      Rooms, <em>not threads.</em>
-    </h2>
-    <p class="section-intro reveal">
-      Groven doesn't force everything into a single discussion format. It organises collective thinking into rooms with different purposes.
-    </p>
+    <div class="section-label reveal">What Groven is trying to achieve</div>
+    <h2 class="section-title reveal">Five concrete <em>goals.</em></h2>
+    <div class="goals-grid">
 
-    <!-- Rooms -->
-    <div class="rooms-grid">
-      <div class="room-card reveal">
-        <div class="room-name">The Plaza</div>
-        <p>The open front door. Post a question, share an observation, raise a concern. Low threshold, no formality required.</p>
+      <div class="goal-card reveal">
+        <h3>Thoughts stay alive.</h3>
+        <p>A contribution that isn't understood today may make sense in three weeks. Groven doesn't forget — it connects.</p>
       </div>
-      <div class="room-card reveal">
-        <div class="room-name">Tables</div>
-        <p>Form when a matter needs focus. A policy question, a design problem, a normative disagreement. Tables are where collective thinking happens.</p>
+
+      <div class="goal-card reveal">
+        <h3>Structure emerges without being imposed.</h3>
+        <p>The AI suggests how a thought relates to others. The human decides. Nobody has to classify their thought before they express it.</p>
       </div>
-      <div class="room-card reveal">
-        <div class="room-name">The Proposal Lab</div>
-        <p>Where options become decision-ready. Language is sharpened. Consequences are mapped. Objections are named. This is not discussion — it is drafting.</p>
+
+      <div class="goal-card reveal">
+        <h3>Decisions have memory.</h3>
+        <p>When a community reaches a conclusion, the path to get there remains visible. Minority positions are documented. Reasoning is readable — even two years later.</p>
       </div>
-      <div class="room-card reveal">
-        <div class="room-name">The Assembly</div>
-        <p>Where formal decisions happen. Only matters that have explicitly entered a decision path arrive here, with a declared decision body, method, and scope.</p>
+
+      <div class="goal-card reveal">
+        <h3>Power is transparent.</h3>
+        <p>Who has which role is visible. The AI has no influence on decisions — it clarifies, it connects, it summarises. But it does not decide, and it does not evaluate.</p>
       </div>
-      <div class="room-card room-card-wide reveal">
-        <div class="room-name">The Library</div>
-        <p>The community's permanent memory. Decisions, their reasoning, minority positions, implementation commitments, and review dates — all preserved and searchable.</p>
+
+      <div class="goal-card goal-card-wide reveal">
+        <h3>Small communities can actually use it.</h3>
+        <p>Groven is open source. It is self-hostable. It needs no platform, no contract, no subscription. A cooperative, a neighbourhood council, a research group can install it tomorrow and start today.</p>
       </div>
+
     </div>
-
-    <p class="rooms-note reveal">People move freely between rooms. The system preserves where ideas have travelled and why.</p>
   </div>
 </section>
 
-<!-- ══ AI AS CARTOGRAPHER ══ -->
-<section id="ai" class="section section-forest">
+<!-- ══ WHAT IT FEELS LIKE ══ -->
+<section id="experience" class="section section-forest">
   <div class="grain grain-dark"></div>
+  <div class="container experience-inner">
+    <div class="section-label reveal" style="color: var(--mint)">What it feels like</div>
+    <div class="experience-text">
+      <p class="reveal">You arrive. You don't see a list of topics. You see fragments — moments from ongoing conversations. The sharpest sentence. The most open question. The thought still waiting for a response.</p>
+      <p class="reveal">You move. Not through categories or menus. Through a space with depth. Older conversations lie further back. New thoughts are in front. When something interests you, you simply move closer. There is no door that opens. You are just, at some point, inside.</p>
+      <p class="reveal">You have something on your mind. You write it down. The AI looks for where it belongs — and suggests conversations that are connected to it. Or it tells you this is something new. Then your thought rests in the Grove. And waits to see if someone else finds it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHERE WE ARE ══ -->
+<section id="status" class="section section-cream">
   <div class="container">
-    <div class="section-label reveal" style="color: var(--mint)">AI's Role</div>
-    <h2 class="section-title section-title-light reveal">
-      AI as <em>cartographer.</em>
-    </h2>
-    <div class="ai-content">
-      <div class="ai-text reveal">
-        <p>Groven uses AI not to govern, but to map.</p>
-        <p>When you write a contribution, the AI proposes how it relates to the conversation — what function it serves, what it connects to, whether it opens a question or closes one. You review. You can override. Your reading and the AI's reading both remain visible.</p>
-        <p>The AI can also suggest syntheses — concrete proposals that connect threads you might not have noticed were related. But suggestions remain ephemeral until a human accepts them. The AI cannot add structure to the discussion on its own.</p>
-        <p class="ai-emphasis">Classification is not neutral. Calling something a "contradiction" when the author sees it as a "reframing" is a substantive act. In Groven, that interpretive tension is preserved as information, not resolved by algorithm.</p>
-      </div>
+    <div class="section-label reveal">Where we are</div>
+    <div class="status-text">
+      <p class="reveal">Groven is a project in development. It is being built in the context of CORPUS — an open licensing and royalty system for music in the age of AI, initiated by <strong>Sofilab GmbH</strong> in Munich.</p>
+      <p class="reveal">CORPUS needs exactly what Groven is trying to build: a place where a small community can think through complex questions together — and make decisions that are still traceable years later.</p>
+      <p class="reveal status-emphasis">Groven is open source. MIT licence. Self-hostable.<br>And it is governed by the same principles it is meant to embody.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ TWO TIERS OF VOTING ══ -->
-<section id="voting" class="section section-cream">
-  <div class="container">
-    <div class="section-label reveal">Voting</div>
-    <h2 class="section-title reveal">
-      Two tiers <em>of voting.</em>
-    </h2>
-    <p class="section-intro reveal">
-      Not every expression of agreement is a governance act. Groven distinguishes between signal and decision.
-    </p>
-    <div class="voting-grid">
-      <div class="voting-card reveal">
-        <div class="voting-tier">Temperature voting</div>
-        <div class="voting-kind">Informal · Open · Per-contribution</div>
-        <p>Anyone can signal support or opposition to an idea, with a one-sentence justification. This tells the community where energy and resistance live, without the weight of a binding decision.</p>
-      </div>
-      <div class="voting-card voting-card-formal reveal">
-        <div class="voting-tier">Governance voting</div>
-        <div class="voting-kind">Formal · Scoped · Final</div>
-        <p>A declared decision body, a declared method, a quorum. The outcome is permanently recorded alongside the reasoning that produced it, the minority positions, and a review date.</p>
-      </div>
-    </div>
-    <p class="voting-note reveal">Most platforms offer only one of these. Groven offers both, because communities need signal before they need decision.</p>
-  </div>
-</section>
-
-<!-- ══ FACILITATION ══ -->
-<section id="facilitation" class="section section-dark">
-  <div class="grain grain-dark"></div>
-  <div class="container facilitation-inner">
-    <div class="section-label reveal" style="color: var(--mint)">Facilitation</div>
-    <h2 class="section-title section-title-light reveal">
-      Human facilitation, <em>not just algorithms.</em>
-    </h2>
-    <p class="reveal" style="color: var(--mint-faint); max-width: 42rem; line-height: 1.8; font-size: 1.05rem;">
-      Every Groven space has visible stewards — people whose role is to maintain the conditions of exchange. They don't control outcomes. They de-escalate, help formulate governable questions, ensure minority concerns aren't erased, and document their own interventions.
-    </p>
-    <p class="reveal" style="color: var(--mint); margin-top: 1.5rem; font-style: italic; font-family: var(--font-display); font-size: 1.3rem;">
-      Governance tools fail when they treat social care as an afterthought. In Groven, facilitation is part of the architecture.
-    </p>
-  </div>
-</section>
-
-<!-- ══ WHAT GROVEN IS NOT ══ -->
-<section id="what-its-not" class="section section-cream">
-  <div class="container">
-    <div class="section-label reveal">What Groven Is Not</div>
-    <h2 class="section-title reveal">
-      Clear boundaries, <em>by design.</em>
-    </h2>
-    <div class="not-grid">
-      <div class="not-card reveal">
-        <h3>Not a better comment thread.</h3>
-        <p>It's not optimised for engagement, reactions, or virality. There are no likes, no algorithmic feeds, no trending topics.</p>
-      </div>
-      <div class="not-card reveal">
-        <h3>Not only a decision platform.</h3>
-        <p>Most matters in a community don't need a vote. Groven supports the full range from open exchange to formal governance — and doesn't pressure everything toward closure.</p>
-      </div>
-      <div class="not-card reveal">
-        <h3>Not an AI moderator.</h3>
-        <p>The AI proposes structure. It doesn't hide content, rank contributions, or decide when a community must act.</p>
-      </div>
-      <div class="not-card reveal">
-        <h3>Not a product yet.</h3>
-        <p>Groven is an open-source research prototype. A working demo exists. The concept paper is public. The questions are real. The answers require building and testing with real communities.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CORPUS ══ -->
-<section id="corpus" class="section section-forest">
-  <div class="grain grain-dark"></div>
-  <div class="container corpus-inner">
-    <div>
-      <div class="section-label reveal" style="color: var(--mint)">Context</div>
-      <h2 class="section-title section-title-light reveal">The CORPUS<br>Royalty Protocol</h2>
-      <p class="reveal" style="color: var(--mint-faint); max-width: 32rem; line-height: 1.7">
-        Groven is initiated within the governance design of the <strong style="color: rgba(255,255,255,0.85)">CORPUS Royalty Protocol</strong> — an open licensing and royalty infrastructure for music in the age of AI, developed by Sofilab GmbH in Munich, co-funded by the European Union (Creative Europe).
-      </p>
-      <p class="reveal" style="color: var(--mint-faint); max-width: 32rem; line-height: 1.7; margin-top: 1rem">
-        CORPUS needs a governance platform where a small, curated contributor community can deliberate, reason through trade-offs, and make binding decisions with permanently legible reasoning. Groven is that platform.
-      </p>
-      <p class="reveal" style="color: var(--mint); margin-top: 1.5rem; font-style: italic">
-        But Groven is not CORPUS-specific. Its architecture is domain-agnostic — designed for any community that needs to move from discussion to decision: cooperatives, cultural organisations, municipalities, research groups, DAOs, and beyond.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ WHAT EXISTS TODAY ══ -->
-<section id="what-exists" class="section section-cream">
-  <div class="container">
-    <div class="section-label reveal">What Exists Today</div>
-    <h2 class="section-title reveal">
-      A behavioural prototype, <em>live and testable.</em>
-    </h2>
-    <div class="prototype-grid">
-      <div class="proto-card reveal">
-        <h3>Structured contribution</h3>
-        <p>Write your thinking, and the AI proposes how it fits into the conversation. You review and confirm.</p>
-      </div>
-      <div class="proto-card reveal">
-        <h3>Visible reasoning</h3>
-        <p>Every contribution shows its type, its relationships, and any interpretive disagreement between author and AI.</p>
-      </div>
-      <div class="proto-card reveal">
-        <h3>Synthesis suggestions</h3>
-        <p>The AI analyses the discussion and proposes concrete proposals that connect divergent threads. You decide whether they enter the conversation.</p>
-      </div>
-      <div class="proto-card reveal">
-        <h3>Temperature voting</h3>
-        <p>Signal support or opposition to any proposal, with justification. See at a glance where the community stands.</p>
-      </div>
-      <div class="proto-card proto-card-wide reveal">
-        <h3>A navigable graph</h3>
-        <p>The discussion as a living, visual structure, not a scrollable wall of text.</p>
-      </div>
-    </div>
-    <p class="proto-note reveal">
-      The prototype ships with four pre-loaded discussion spaces: three in the context of CORPUS music governance, and one about programming Helmut Lachenmann for an ensemble season — demonstrating that the structure works regardless of domain.
-    </p>
-  </div>
-</section>
-
-<!-- ══ OPEN SOURCE ══ -->
-<section id="open-source" class="section section-dark">
-  <div class="grain grain-dark"></div>
-  <div class="container">
-    <div class="section-label reveal" style="color: var(--mint)">Open Source</div>
-    <h2 class="section-title section-title-light reveal">
-      Open source <em>from day one.</em>
-    </h2>
-    <p class="section-intro reveal" style="color: var(--mint-faint)">
-      MIT license. Self-hostable. No mandatory cloud dependency. A governance platform for communities requires the trust that comes from transparency. The source code being readable, auditable, and forkable is part of what makes the governance process trustworthy.
-    </p>
-    <p class="reveal" style="color: var(--mint-faint); line-height: 1.8; margin-bottom: 2.5rem;">
-      Groven will be governed using Groven itself — roadmap decisions, RFCs, and breaking changes all processed through the platform's own rooms.
-    </p>
-    <div class="reveal">
-      <a href="https://github.com/sofilab-art/groven" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ CLOSING ══ -->
+<!-- ══ CLOSING / CTA ══ -->
 <section id="closing" class="section section-dark closing-section">
   <div class="grain grain-dark"></div>
-  <canvas id="closing-canvas"></canvas>
   <div class="container closing-inner">
     <h2 class="closing-title reveal">
-      Groven is where public thinking <em>becomes collective action.</em>
+      You believe communities can think better together?
     </h2>
-    <p class="closing-body reveal">
-      It is open source, self-hostable, and governed by the same tool it provides.
-    </p>
+    <p class="closing-body reveal">Then you're in the right place.</p>
     <div class="closing-links reveal">
-      <a href="https://groven.online" class="closing-link">
-        <span class="cl-label">groven.online</span>
-        <span class="cl-sub">Website</span>
-      </a>
       <a href="https://github.com/sofilab-art/groven" class="closing-link" target="_blank" rel="noopener">
-        <span class="cl-label">github.com/sofilab-art/groven</span>
-        <span class="cl-sub">Source code &amp; issues</span>
+        <span class="cl-label">See the code</span>
+        <span class="cl-sub">github.com/sofilab-art/groven</span>
       </a>
-      <a href="mailto:hello@sofilab.de" class="closing-link">
-        <span class="cl-label">Sofilab GmbH, Munich</span>
-        <span class="cl-sub">Contact &amp; collaboration</span>
+      <a href="mailto:groven@sofilab.art" class="closing-link">
+        <span class="cl-label">Write to us</span>
+        <span class="cl-sub">groven@sofilab.art</span>
       </a>
     </div>
-    <div class="closing-seed reveal">This project is itself a Seed. Fork it.</div>
+    <div class="closing-seed reveal">Groven is not a product. It is a question. Fork it.</div>
   </div>
 </section>
 
@@ -353,7 +195,11 @@
 <footer class="footer">
   <div class="container footer-inner">
     <span class="footer-logo">Groven</span>
-    <span class="footer-copy">Open Source Initiative · Initiated by Sofilab GmbH, Munich · 2026</span>
+    <span class="footer-copy">Open Source Initiative · Initiated by Sofilab GmbH, Munich</span>
+    <div class="footer-links">
+      <a href="https://groven.online">groven.online</a>
+      <a href="https://github.com/sofilab-art/groven" target="_blank" rel="noopener">github.com/sofilab-art/groven</a>
+    </div>
   </div>
 </footer>
 
